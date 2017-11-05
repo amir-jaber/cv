@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">cv</string>
     <string name="action_settings">Settings</string>
     <string name="algorithm_golden_section"><![CDATA[
@@ -27,7 +27,8 @@
      if (Math.abs(b - a) < e) break; \n
      } \n
      return (a + b) / 2; \n
-     }]]></string>
+     } \n
+    ]]></string>
     <string name="algorithm_fibonacci"><![CDATA[
         public double findMaxMin(double a, double b, double e, int n) { \n
         double d = e / 10; \n
@@ -74,6 +75,40 @@
                 x = (a + b) / 2; \n
                 y = f(x); \n
             return x & y; (max and min) \n
+        } \n
+    ]]></string>
+    <string name="algorithm_bisection" tools:ignore="TypographyOther"><![CDATA[
+        public double findMax(double a, double b, double eps, int n) { \n
+        double c = 0; \n
+                while ((b - a) > 2 * eps) { \n
+                    c = (a + b) / 2; \n
+                    if (f(c) == 0) { \n
+                        break; \n
+                    } \n
+                    if (f(a) * f(c) < 0) { \n
+                        b = c; \n
+                    } else { \n
+                        a = c; \n
+                    } \n
+                } \n
+        } \n
+        return c; \n
+} \n
+    public double findMin(double a, double b, double eps, int n) { \n
+        double c = 0; \n
+              while ((b - a) > 2 * eps) { \n
+                    c = (a + b) / 2; \n
+                    if (f(c) == 0) { \n
+                        break; \n
+                    } \n
+                    if (f(a) * f(c) > 0) { \n
+                        b = c; \n
+                    } else { \n
+                        a = c; \n
+                   } \n
+        } \n
+        return c; \n
+     } \n
     ]]></string>
     <string-array name="functions_golden_section">
         <item>(x + 1)^3 + 5 * x^2</item>
@@ -84,5 +119,10 @@
         <item>(x + 1)^3 + 5 * x^2</item>
         <item>x + 5 * x^3</item>
         <item>x - x^2</item>
+    </string-array>
+    <string-array name="functions_bisection">
+        <item>x^3 + 5x - 3</item>
+        <item>x^2 - 8</item>
+        <item>(x + 5x) / 2x</item>
     </string-array>
 </resources>

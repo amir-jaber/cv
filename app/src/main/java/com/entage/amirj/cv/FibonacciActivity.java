@@ -50,12 +50,6 @@ public class FibonacciActivity extends AppCompatActivity {
         textView.setTextColor(Color.GRAY);
         textView2.setTextColor(Color.GRAY);
 
-        TranslateAnimation moveLefttoRight = new TranslateAnimation(0, 200, 0, 0);
-        moveLefttoRight.setDuration(30000);
-        moveLefttoRight.setFillAfter(true);
-
-        flower.startAnimation(moveLefttoRight);
-
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.functions_fibonacci, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
@@ -67,14 +61,17 @@ public class FibonacciActivity extends AppCompatActivity {
                     case 0:
 
                         funk_number = position;
+                        flower.setImageResource(R.drawable.graph1fibonacci);
                         break;
                     case 1:
 
                         funk_number = position;
+                        flower.setImageResource(R.drawable.graph2fibonacci);
                         break;
                     case 2:
 
                         funk_number = position;
+                        flower.setImageResource(R.drawable.graph3fibonacci);
                         break;
                 }
             }

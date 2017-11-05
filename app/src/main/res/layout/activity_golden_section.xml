@@ -94,7 +94,7 @@
         android:layout_above="@+id/button"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="13dp"
+        android:layout_marginBottom="30dp"
         android:text="Show Algorithm" />
 
     <ImageView
@@ -102,9 +102,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/button"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
+        android:layout_toRightOf="@id/show1"
         android:layout_below="@+id/textView2"
         app:srcCompat="@drawable/fl" />
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textView2"
+        android:layout_marginEnd="58dp"
+        android:layout_marginRight="58dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="serif-monospace"
+        android:text="Graph (-a, b)"
+        android:textAllCaps="false"
+        android:textStyle="bold" />
 
 </RelativeLayout>

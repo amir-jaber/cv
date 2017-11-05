@@ -36,9 +36,14 @@
             android:name=".GoldenSectionAlgorithm"
             android:configChanges="orientation"
             android:theme="@style/AppTheme.CustomTheme" />
-        <activity android:name=".FibonacciAlgorithm"
+        <activity
+            android:name=".FibonacciAlgorithm"
             android:configChanges="orientation"
             android:theme="@style/AppTheme.CustomTheme" />
+        <activity
+            android:name=".BisectionAlgorithm"
+            android:configChanges="orientation"
+            android:theme="@style/AppTheme.CustomTheme"/>
     </application>
 
 </manifest>
